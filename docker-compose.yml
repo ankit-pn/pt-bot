@@ -6,6 +6,6 @@ services:
     container_name: process-monitor
     pid: "host"
     volumes:
-      - /proc:/proc:ro
+      - /proc:/proc:ro,Z
     command: python ./monitor_processes.py
     restart: always
