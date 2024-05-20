@@ -11,4 +11,4 @@ COPY . .
 RUN pip install --no-cache-dir psutil requests
 
 # Run monitor_processes.py when the container launches
-CMD ["python", "./monitor_processes.py"]
+CMD ["python", "monitor_processes.py"]
