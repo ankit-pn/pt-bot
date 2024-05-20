@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  process-monitor:
+    build: .
+    container_name: process-monitor
+    pid: "host"
+    volumes:
+      - /proc:/proc:ro
+    command: python ./monitor_processes.py
+    restart: always
