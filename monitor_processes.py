@@ -1,3 +1,5 @@
+print("Starting the Python script execution.")  # Added at the very top
+
 import psutil
 import time
 import json
