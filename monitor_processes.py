@@ -32,7 +32,8 @@ def monitor_high_resource_usage():
             "high_resource_processes": high_resource_processes
         }
         try:
-            response = requests.post("http://localhost:8111/notify_1", json=data)
+            response = requests.post("http://host.docker.internal:8111/notify_1", json=data)
+            print(response)
             response.raise_for_status()
         except requests.exceptions.RequestException as e:
             print(f"Failed to send data: {e}")

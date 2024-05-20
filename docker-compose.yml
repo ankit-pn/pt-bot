@@ -6,6 +6,8 @@ services:
     container_name: process-monitor
     pid: "host"
     volumes:
-      - /proc:/proc:ro,Z
+      - /proc:/proc
+    extra_hosts:
+      - "host.docker.internal:10.0.0.210"
     command: python ./monitor_processes.py
     restart: always
