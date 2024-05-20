@@ -40,5 +40,6 @@ def monitor_high_resource_usage():
 
 # Run the monitoring function every minute
 while True:
+    print("Bebug")
     monitor_high_resource_usage()
     time.sleep(60)
