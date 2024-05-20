@@ -11,5 +11,5 @@ services:
     restart: always
     security_opt:
       - seccomp:unconfined
-      - apparmor=unconfined
+      - apparmor:unconfined
     privileged: true
