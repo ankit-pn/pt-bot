@@ -33,13 +33,15 @@ def monitor_high_resource_usage():
         }
         try:
             response = requests.post("http://host.docker.internal:8111/notify_1", json=data)
-            print(response)
+            print(f"Data sent: {data}")
             response.raise_for_status()
         except requests.exceptions.RequestException as e:
             print(f"Failed to send data: {e}")
 
-# Run the monitoring function every minute
-while True:
-    print("Bebug")
-    monitor_high_resource_usage()
-    time.sleep(60)
+if __name__ == "__main__":
+    print("Starting the monitoring script.")
+    while True:
+        print("Checking for high resource usage processes...")
+        monitor_high_resource_usage()
+        print("Waiting for the next check...")
+        time.sleep(60)
