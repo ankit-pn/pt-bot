@@ -12,3 +12,4 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor=unconfined
+    privileged: true
