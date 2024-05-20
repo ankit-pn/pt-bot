@@ -10,4 +10,5 @@ services:
     command: python ./monitor_processes.py
     restart: always
     security_opt:
+      - seccomp:unconfined
       - apparmor=unconfined
